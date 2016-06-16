@@ -11,6 +11,7 @@ function start () {
   // Your turn! Create a new function called `two`, then call it from here.
   two()
   three()
+  four()
 }
 
 function one () {
@@ -40,9 +41,21 @@ function three () {
 }
 // CREATE FUNCTION four HERE
 
+function four () {
+  var four = document.getElementById('four')
+  four.addEventListener('click', redToWhite)
+}
 // Changes the background color of event's target
 function makeBlue (evt) {
   evt.target.style.backgroundColor = 'blue'
+}
+
+function redToWhite (evt) {
+  if (evt.target.style.backgroundColor === 'red') {
+    evt.target.style.backgroundColor = 'white'
+  } else {
+    evt.target.style.backgroundColor = 'red'
+  }
 }
 
 function makeOrange (evt) {
